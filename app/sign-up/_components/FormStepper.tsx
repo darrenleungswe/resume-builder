@@ -1,5 +1,7 @@
-import { Step, StepLabel, Stepper, Typography } from "@mui/material";
-import { signUpFormStepType } from "../types";
+"use client";
+
+import { Box, Step, StepLabel, Stepper, Typography } from "@mui/material";
+import { useSearchParams } from "next/navigation";
 
 const steps = [
   { path: "basic-info", label: "Basic Information" },
@@ -8,8 +10,9 @@ const steps = [
   { path: "social-profiles", label: "Social Profiles" },
 ];
 
-export default function FormStepper({ step }: { step: signUpFormStepType }) {
-  console.log(step);
+export default function FormStepper() {
+  const searchParams = useSearchParams();
+  const step = searchParams.get("step");
 
   return (
     <Stepper>
