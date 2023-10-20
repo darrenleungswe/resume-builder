@@ -1,5 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import FormStepper from "./_components/FormStepper";
+import FormActionButtonGroup from "./_components/FormActionButtonGroup";
 
 export default function SignUpLayout({
   children,
@@ -14,6 +15,7 @@ export default function SignUpLayout({
         </Typography>
         <FormStepper />
         {children}
+        <FormActionButtonGroup />
       </Container>
     </main>
   );
