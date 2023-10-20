@@ -15,7 +15,7 @@ export default function FormStepper() {
   const step = searchParams.get("step");
 
   return (
-    <Stepper>
+    <Stepper sx={{ mb: "36px" }}>
       {steps.map(({ path, label }) => (
         <Step key={path} active={step === path}>
           <StepLabel>
