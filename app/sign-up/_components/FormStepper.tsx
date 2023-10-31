@@ -15,9 +15,9 @@ export default function FormStepper() {
   const step = searchParams.get("step");
 
   return (
-    <Stepper sx={{ mb: "36px" }}>
+    <Stepper sx={{ mb: "36px" }} connector={null}>
       {steps.map(({ path, label }) => (
-        <Step key={path} active={step === path}>
+        <Step key={path} active={step === path} sx={{ px: 0, mr: "24px" }}>
           <StepLabel>
             <Typography variant="h5">{label}</Typography>
           </StepLabel>
